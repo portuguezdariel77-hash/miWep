@@ -1,193 +1,167 @@
-html_content = """
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Código de tu Página Web</title>
+    <title>Para el amor de mi vida 💖</title>
     <style>
-        * { box-sizing: border-box; }
-        @page {
-            size: A4;
-            margin: 15mm 12mm;
-            background-color: #faf8f5;
-        }
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0;
-            padding: 0;
-            background-color: #faf8f5;
-            color: #333;
-            line-height: 1.5;
-            font-size: 11pt;
+            overflow: hidden;
+            text-align: center;
         }
-        .header {
-            background-color: #1a1a1a;
-            color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .header h1 {
-            margin: 0;
-            font-size: 18pt;
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-        .header p {
-            margin: 5px 0 0 0;
-            color: #ccc;
-            font-size: 10pt;
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(255, 75, 110, 0.2);
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            z-index: 10;
         }
         h2 {
-            font-size: 13pt;
-            color: #1a1a1a;
-            border-left: 4px solid #d4af37;
-            padding-left: 8px;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            page-break-after: avoid;
+            color: #ff477e;
+            font-size: 22px;
+            margin-bottom: 25px;
         }
-        p, ol, ul {
-            margin-bottom: 12px;
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
-        ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .code-box {
-            background-color: #2d2d2d;
-            color: #f8f8f2;
-            padding: 15px;
-            border-radius: 6px;
-            font-family: monospace;
-            font-size: 9.5pt;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-            margin: 15px 0;
-        }
-        .note-box {
-            background-color: #f0ebdf;
-            border-left: 4px solid #b4a284;
-            padding: 12px;
-            border-radius: 4px;
-            margin: 15px 0;
-            font-size: 10.5pt;
-        }
-        .strong-accent {
-            color: #1a1a1a;
+        button {
+            padding: 12px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
             font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn-yes {
+            background-color: #ff477e;
+            color: white;
+        }
+        .btn-yes:hover {
+            transform: scale(1.1);
+        }
+        .btn-no {
+            background-color: #ffb3c1;
+            color: white;
+        }
+        .btn-no:hover {
+            transform: scale(1.1);
+        }
+        .final-message {
+            display: none;
+            color: #ff477e;
+        }
+        .final-message p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #ff7096;
+        }
+        .decorations {
+            font-size: 40px;
+            margin: 10px 0;
+        }
+        .btn-send {
+            background-color: #25D366;
+            color: white;
+            margin-top: 20px;
+        }
+        .heart {
+            position: absolute;
+            color: #ff7096;
+            opacity: 0.6;
+            animation: float 4s linear infinite;
+            z-index: 1;
+            pointer-events: none;
+        }
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Código HTML Completo para tu Proyecto</h1>
-        <p>Copia todo el texto de la caja negra de abajo y pégalo directamente en la herramienta web.</p>
+    <div class="card">
+        <div id="quiz-section">
+            <div class="decorations">🌹✨💝</div>
+            <h2 id="question-text">Pregunta 1: ¿Me amas con todo tu corazón?</h2>
+            <div class="buttons">
+                <button class="btn-yes" onclick="saveAnswer('Sí')">SÍ 💖</button>
+                <button class="btn-no" onclick="saveAnswer('No')">NO 💔</button>
+            </div>
+        </div>
+
+        <div id="final-section" class="final-message">
+            <div class="decorations">🌹💖✨👑✨💖🌹</div>
+            <p><strong>te amo mucho mi amor eres muy linda y te amo con todo mi carazon, besitos te amo amomo</strong></p>
+            <div class="decorations">💋💋💋</div>
+            <button class="btn-send" onclick="sendToWhatsApp()">Enviar mis respuestas 💬</button>
+        </div>
     </div>
 
-    <h2>Tu Código HTML Listo para Copiar</h2>
-    <div class="code-box">&lt;!DOCTYPE html&gt;
-&lt;html lang="es"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Proyecto Universitario&lt;/title&gt;
-    &lt;style&gt;
-        body {
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #faf9f6;
-            color: #222;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        .contenedor {
-            max-width: 550px;
-            padding: 40px 30px;
-            background-color: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
-            border: 1px solid #eee;
-        }
-        .tag {
-            display: inline-block;
-            background-color: #1a1a1a;
-            color: #fff;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            padding: 6px 16px;
-            border-radius: 50px;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            margin: 0 0 15px 0;
-            letter-spacing: -0.5px;
-            color: #111;
-        }
-        .linea {
-            width: 50px;
-            height: 2px;
-            background-color: #d4af37;
-            margin: 20px auto;
-        }
-        p {
-            font-size: 1.05rem;
-            color: #666;
-            line-height: 1.6;
-            margin: 0 0 30px 0;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: transparent;
-            color: #1a1a1a;
-            border: 1px solid #1a1a1a;
-            text-decoration: none;
-            border-radius: 6px;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-        }
-        .btn:hover {
-            background-color: #1a1a1a;
-            color: #fff;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
+    <script>
+        // Recuerda cambiar esto por tu número (ejemplo: 50688888888 sin el signo +)
+        const TELEFONO = "50671346025"; 
 
-    &lt;div class="contenedor"&gt;
-        &lt;span class="tag"&gt;Proyecto en Desarrollo&lt;/span&gt;
-        &lt;h1&gt;Nombre de la Propuesta&lt;/h1&gt;
-        &lt;div class="linea"&gt;&lt;/div&gt;
-        &lt;p&gt;Este es un espacio conceptual diseñado para la presentación del proyecto universitario. Una propuesta limpia, minimalista y enfocada en la elegancia visual.&lt;/p&gt;
-        &lt;a href="#" class="btn"&gt;Saber más&lt;/a&gt;
-    &lt;/div&gt;
+        const questions = [
+            "Pregunta 1: ¿Me amas con todo tu corazón?",
+            "Pregunta 2: ¿Crees que somos el uno para el otro?",
+            "Pregunta 3: ¿Me extrañas cuando no estamos hablando?",
+            "Pregunta 4: ¿Te gusta cuando me pongo tierno contigo?",
+            "Pregunta 5: ¿Quieres que estemos juntos por muchísimo tiempo?"
+        ];
 
-&lt;/body&gt;
-&lt;/html&gt;</div>
+        let currentQuestionIndex = 0;
+        let userAnswers = [];
 
-    <div class="note-box">
-        <strong>💡 Instrucciones breves:</strong> Pega este bloque de código en <strong>Codepen.io</strong>, en <strong>Tiny.host</strong> o en <strong>CodeSandbox</strong> para generar y visualizar tu página web instantáneamente. ¡Puedes editar los textos dentro de las etiquetas &lt;h1&gt; y &lt;p&gt; cuando quieras!
-    </div>
+        function saveAnswer(answer) {
+            userAnswers.push(`P${currentQuestionIndex + 1}: ${answer}`);
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questions.length) {
+                document.getElementById('question-text').innerText = questions[currentQuestionIndex];
+                createHeart();
+            } else {
+                document.getElementById('quiz-section').style.display = 'none';
+                document.getElementById('final-section').style.display = 'block';
+                for(let i=0; i<20; i++) { setTimeout(createHeart, i * 150); }
+            }
+        }
+
+        function sendToWhatsApp() {
+            let textoRespuestas = userAnswers.join("\n");
+            let mensajeCompleto = `¡Hola mi amor! Ya respondí tus preguntas: \n\n${textoRespuestas}\n\n¡Te amo mucho! 💖`;
+            let url = `https://api.whatsapp.com/send?phone=${TELEFONO}&text=${encodeURIComponent(mensajeCompleto)}`;
+            window.open(url, '_blank');
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            const icons = ['❤️', '💖', '🌹', '✨'];
+            heart.innerText = icons[Math.floor(Math.random() * icons.length)];
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            heart.style.fontSize = (Math.random() * 15 + 20) + 'px';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 4000);
+        }
+
+        setInterval(createHeart, 900);
+    </script>
 
 </body>
 </html>
-"""
-
-with open("codigo_proyecto.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
-
-from weasyprint import HTML
-HTML(filename="codigo_proyecto.html").write_pdf("codigo_proyecto_universitario.pdf")
-print("PDF generado con éxito.")
