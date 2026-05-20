@@ -1,2 +1,193 @@
-<h1>Hola mundo</h1>
-<p>Mi primera pagina web</p>
+html_content = """
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Código de tu Página Web</title>
+    <style>
+        * { box-sizing: border-box; }
+        @page {
+            size: A4;
+            margin: 15mm 12mm;
+            background-color: #faf8f5;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #faf8f5;
+            color: #333;
+            line-height: 1.5;
+            font-size: 11pt;
+        }
+        .header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 18pt;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .header p {
+            margin: 5px 0 0 0;
+            color: #ccc;
+            font-size: 10pt;
+        }
+        h2 {
+            font-size: 13pt;
+            color: #1a1a1a;
+            border-left: 4px solid #d4af37;
+            padding-left: 8px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+            page-break-after: avoid;
+        }
+        p, ol, ul {
+            margin-bottom: 12px;
+        }
+        ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .code-box {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 9.5pt;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 15px 0;
+        }
+        .note-box {
+            background-color: #f0ebdf;
+            border-left: 4px solid #b4a284;
+            padding: 12px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-size: 10.5pt;
+        }
+        .strong-accent {
+            color: #1a1a1a;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Código HTML Completo para tu Proyecto</h1>
+        <p>Copia todo el texto de la caja negra de abajo y pégalo directamente en la herramienta web.</p>
+    </div>
+
+    <h2>Tu Código HTML Listo para Copiar</h2>
+    <div class="code-box">&lt;!DOCTYPE html&gt;
+&lt;html lang="es"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Proyecto Universitario&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #faf9f6;
+            color: #222;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .contenedor {
+            max-width: 550px;
+            padding: 40px 30px;
+            background-color: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            border: 1px solid #eee;
+        }
+        .tag {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #fff;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 50px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.5px;
+            color: #111;
+        }
+        .linea {
+            width: 50px;
+            height: 2px;
+            background-color: #d4af37;
+            margin: 20px auto;
+        }
+        p {
+            font-size: 1.05rem;
+            color: #666;
+            line-height: 1.6;
+            margin: 0 0 30px 0;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: transparent;
+            color: #1a1a1a;
+            border: 1px solid #1a1a1a;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;div class="contenedor"&gt;
+        &lt;span class="tag"&gt;Proyecto en Desarrollo&lt;/span&gt;
+        &lt;h1&gt;Nombre de la Propuesta&lt;/h1&gt;
+        &lt;div class="linea"&gt;&lt;/div&gt;
+        &lt;p&gt;Este es un espacio conceptual diseñado para la presentación del proyecto universitario. Una propuesta limpia, minimalista y enfocada en la elegancia visual.&lt;/p&gt;
+        &lt;a href="#" class="btn"&gt;Saber más&lt;/a&gt;
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</div>
+
+    <div class="note-box">
+        <strong>💡 Instrucciones breves:</strong> Pega este bloque de código en <strong>Codepen.io</strong>, en <strong>Tiny.host</strong> o en <strong>CodeSandbox</strong> para generar y visualizar tu página web instantáneamente. ¡Puedes editar los textos dentro de las etiquetas &lt;h1&gt; y &lt;p&gt; cuando quieras!
+    </div>
+
+</body>
+</html>
+"""
+
+with open("codigo_proyecto.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+from weasyprint import HTML
+HTML(filename="codigo_proyecto.html").write_pdf("codigo_proyecto_universitario.pdf")
+print("PDF generado con éxito.")
